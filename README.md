@@ -1,14 +1,14 @@
-# Автозаполнение форм заказов на секвенирование в еврогене или геноме
-> * Коннектится к airtable базе, вынимает имена реакция и seqID.
+# Auto form of form for sequence requests
+> * connects to airtable base
 
 
-## Install (еще не работает)
+## Install (NO)
 
 `pip install auto_seq_req`
 
 ## How to use
 
-Поглядим
+hmm
 
 ```python
 1+1

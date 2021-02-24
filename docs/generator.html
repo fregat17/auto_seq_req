@@ -6,8 +6,8 @@ title: Sequence request generator
 keywords: fastai
 sidebar: home_sidebar
 
-summary: "Генерируем формы для заказов на сиквенс в евроген или в геном."
-description: "Генерируем формы для заказов на сиквенс в евроген или в геном."
+summary: "Generate sequence request for EVROGEN of GENOM"
+description: "Generate sequence request for EVROGEN of GENOM"
 nb_path: "00_generator.ipynb"
 ---
 <!--
@@ -31,7 +31,7 @@ nb_path: "00_generator.ipynb"
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Нужные импорты и переменные для подключения к базе и автоматического заполнения форм</p>
+<p>Some imports ans variables for form completion</p>
 
 </div>
 </div>
@@ -45,7 +45,7 @@ nb_path: "00_generator.ipynb"
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Подключаемся к базе, используя имя базы и ключ. Страница (table_name) из базы читается в виде многоуровневого OrderedDict.</p>
+<p>Connect to base and check</p>
 
 </div>
 </div>
@@ -64,8 +64,8 @@ nb_path: "00_generator.ipynb"
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">assert</span> <span class="nb">type</span><span class="p">(</span><span class="n">airtable</span><span class="o">.</span><span class="n">airtable_url</span><span class="p">)</span> <span class="o">==</span> <span class="nb">str</span><span class="p">,</span> <span class="s1">&#39;ConnectionError: не произошел коннект, возможно ключи к базам кривые&#39;</span>
-<span class="k">assert</span> <span class="nb">type</span><span class="p">(</span><span class="n">airtable</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">table_name</span><span class="p">)[</span><span class="s1">&#39;records&#39;</span><span class="p">][</span><span class="mi">12</span><span class="p">])</span> <span class="o">==</span> <span class="n">collections</span><span class="o">.</span><span class="n">OrderedDict</span><span class="p">,</span> <span class="s1">&#39;Ochibka: почему-то таблица криво прочиталась&#39;</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">assert</span> <span class="nb">type</span><span class="p">(</span><span class="n">airtable</span><span class="o">.</span><span class="n">airtable_url</span><span class="p">)</span> <span class="o">==</span> <span class="nb">str</span><span class="p">,</span> <span class="s1">&#39;ConnectionError:&#39;</span>
+<span class="k">assert</span> <span class="nb">type</span><span class="p">(</span><span class="n">airtable</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">table_name</span><span class="p">)[</span><span class="s1">&#39;records&#39;</span><span class="p">][</span><span class="mi">12</span><span class="p">])</span> <span class="o">==</span> <span class="n">collections</span><span class="o">.</span><span class="n">OrderedDict</span><span class="p">,</span> <span class="s1">&#39;Ochibka:&#39;</span>
 </pre></div>
 
     </div>
@@ -77,7 +77,7 @@ nb_path: "00_generator.ipynb"
 
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Слеудющими действиями мы создаем Pandas.DataFrame таблицу, содержащую имена реакций плонирований и seqID номера. Это все, что нам нужно для формирования содержания формы для заказа секвенирования.</p>
+<p>Create Pandas.DataFrame, containing Names and seq IDs</p>
 
 </div>
 </div>
@@ -96,8 +96,8 @@ nb_path: "00_generator.ipynb"
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">names</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;EmptyNames: в именах пусто почему-то&#39;</span>
-<span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">seqIDs</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;EmptySeqID: в seqIDs пусто почему-то&#39;</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">names</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;EmptyNames:&#39;</span>
+<span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">seqIDs</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;EmptySeqID:&#39;</span>
 </pre></div>
 
     </div>

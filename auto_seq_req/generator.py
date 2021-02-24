@@ -30,7 +30,7 @@ terminators = {'SV40':'c1rev2',
 
 conc = "5 mkM"
 
-plasmida = "Плазмида"
+plasmida = "Plasmid"
 
 # Cell
 airtable = airtable.Airtable(base_key, api_key=api_key)
