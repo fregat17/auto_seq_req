@@ -6,6 +6,11 @@
 
 `pip install auto_seq_req`
 
+## Dependencies (libs)
+
+need to import
+airtable, numpy, pandas, xlsxwriter, collections
+
 ## How to use
 
 hmm

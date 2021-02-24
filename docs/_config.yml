@@ -64,8 +64,6 @@ plugins:
     
 remote_theme: fastai/nbdev-jekyll-theme
 baseurl: /auto_seq_req/
-<<<<<<< HEAD
 encoding: UTF-8
-=======
 theme: jekyll-theme-midnight
->>>>>>> 807240136598ad7eeeca258c4f7427bd3bf0df60
+
