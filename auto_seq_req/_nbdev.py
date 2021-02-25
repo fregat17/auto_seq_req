@@ -12,7 +12,8 @@ index = {"base_key": "00_generator.ipynb",
          "airtable": "00_generator.ipynb",
          "names": "00_generator.ipynb",
          "seqIDs": "00_generator.ipynb",
-         "pandaframe": "00_generator.ipynb"}
+         "pandaframe": "00_generator.ipynb",
+         "selector_maker_2": "00_generator.ipynb"}
 
 modules = ["generator.py"]
 
