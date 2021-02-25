@@ -13,7 +13,7 @@ import collections
 
 # Cell
 base_key = os.environ['AIR_BASE_KEY']
-table_name = os.environ['AIR_TABLE_NAME']
+table_name = 'Cloning reactions'
 api_key = os.environ['AIR_API_KEY']
 
 promoters = {'CMV':'c1for2',

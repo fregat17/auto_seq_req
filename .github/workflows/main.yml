@@ -34,5 +34,8 @@ jobs:
       run: |
         if [ -n "$(nbdev_diff_nbs)" ]; then echo -e "!!! Detected difference between the notebooks and the library"; false; fi
     - name: Run tests
+      env: 
+        AIR_API_KEY: ${{ secrets.AIR_API_KEY }}
+        AIR_BASE_KEY: ${{ secrets.AIR_BASE_KEY }}
       run: |
         nbdev_test_nbs
